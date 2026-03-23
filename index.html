@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guilherme Escobar - Fullstack Developer especializado em Node.js, NestJS, Angular, React e Machine Learning">
+    <meta name="keywords" content="Fullstack Developer, Node.js, NestJS, Angular, React, Machine Learning, Python">
+    <meta name="author" content="Guilherme Escobar Lopes">
+    <title>Guilherme Escobar | Fullstack Developer & ML Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home">GE</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#experience" class="nav-link">Experiência</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+                <li class="language-selector">
+                    <button class="language-btn" id="languageBtn">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">PT</span>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <button class="language-option active" data-lang="pt">
+                            <span class="flag">🇧🇷</span> Português
+                        </button>
+                        <button class="language-option" data-lang="en">
+                            <span class="flag">🇺🇸</span> English
+                        </button>
+                        <button class="language-option" data-lang="es">
+                            <span class="flag">🇪🇸</span> Español
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle">Olá, eu sou</p>
+                <h1 class="hero-title">Guilherme Escobar</h1>
+                <h2 class="hero-description">Fullstack Developer | Backend Specialist | Machine Learning Engineer</h2>
+                <p class="hero-bio">
+                    Desenvolvedor Fullstack com quase 7 anos de experiência construindo aplicações web escaláveis e de alta performance.
+                    Especializado em arquitetura backend com Node.js, NestJS e Python, com sólida expertise em Machine Learning.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Entre em Contato</a>
+                    <a href="#projects" class="btn btn-secondary">Ver Projetos</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/guiesco" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/guilherme-escobar-21b873164/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:guieslopes99@hotmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Sou um desenvolvedor <strong>curioso, criativo e com pensamento crítico</strong>, sempre em busca de novas formas de aprender e me aprimorar. 
+                        Sou movido por desafios e pelo desejo de fazer e aprender coisas novas, sejam tecnologias ou soft skills.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h3>7 Anos de Experiência</h3>
+                                <p>Desenvolvendo soluções web robustas e escaláveis</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h3>Formação em Sistemas de Informação</h3>
+                                <p>UFSC - Foco em Data Science e Engenharia de Software</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h3>Experiência Internacional</h3>
+                                <p>Trabalhando remotamente para empresa em Nova York</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Florianópolis, SC, Brasil</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <span>Português (Nativo), Inglês (Avançado), Espanhol (Intermediário)</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-birthday-cake"></i>
+                            <span>24/10/1999</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experiência Profissional</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Fullstack Developer</h3>
+                            <span class="company">Halo Media</span>
+                        </div>
+                        <div class="timeline-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> New York, USA (Remoto)</span>
+                            <span class="period"><i class="fas fa-calendar"></i> Set 2022 - Presente</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Desenvolvimento de aplicações fullstack usando Node.js, Nest.js, Angular, React e Ionic em múltiplos projetos simultâneos</li>
+                            <li>Implementação de arquiteturas escaláveis com MongoDB e PostgreSQL, garantindo alta disponibilidade e performance</li>
+                            <li>Criação de suítes de testes automatizados com Jest, Jasmine e Cypress</li>
+                            <li>Colaboração com times internacionais em ambiente remoto usando metodologias ágeis (Scrum/Kanban)</li>
+                            <li>Mentoria de desenvolvedores júnior e revisão de código para garantir qualidade e boas práticas</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Node.js</span>
+                            <span>NestJS</span>
+                            <span>Angular</span>
+                            <span>React</span>
+                            <span>MongoDB</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Fullstack Developer</h3>
+                            <span class="company">Linx - Stone</span>
+                        </div>
+                        <div class="timeline-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Florianópolis, Brasil</span>
+                            <span class="period"><i class="fas fa-calendar"></i> Jan 2021 - Set 2022</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Integração de produtos da empresa em plataformas de clientes (websites e aplicações) usando Vue.js e JavaScript vanilla</li>
+                            <li>Desenvolvimento e manutenção de features backend em Python e Node.js, adaptando soluções às necessidades específicas dos clientes</li>
+                            <li>Configuração e otimização de APIs RESTful</li>
+                            <li>Trabalho direto com clientes para entender requisitos e propor soluções técnicas apropriadas</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Vue.js</span>
+                            <span>Python</span>
+                            <span>Node.js</span>
+                            <span>REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Fullstack Developer</h3>
+                            <span class="company">Hero Medic (HealthTech Startup)</span>
+                        </div>
+                        <div class="timeline-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Florianópolis, Brasil</span>
+                            <span class="period"><i class="fas fa-calendar"></i> Jun 2020 - Jan 2021</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Único desenvolvedor responsável por todo o ciclo de vida de uma aplicação de saúde, desde o planejamento até o deploy</li>
+                            <li>Full stack: Angular, Ionic, Node.js e MongoDB, com implementação de autenticação JWT e notificações push</li>
+                            <li>Modelagem e gestão de banco de dados NoSQL, garantindo integridade e performance das queries</li>
+                            <li>Experiência em startup: tomada de decisões técnicas, priorização de features e entrega contínua</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Angular</span>
+                            <span>Ionic</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>JWT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Frontend Developer</h3>
+                            <span class="company">Signa Edu (EdTech)</span>
+                        </div>
+                        <div class="timeline-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Florianópolis, Brasil</span>
+                            <span class="period"><i class="fas fa-calendar"></i> Jan 2019 - Jan 2020</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Desenvolvedor front-end líder para uma plataforma de cursos para pessoas surdas, impactando positivamente a acessibilidade educacional</li>
+                            <li>Manutenção e criação de novas features usando JavaScript vanilla e Vue.js</li>
+                            <li>Implementação de interfaces responsivas e acessíveis seguindo diretrizes WCAG</li>
+                            <li>Colaboração com time de design para traduzir mockups em interfaces funcionais</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Vue.js</span>
+                            <span>JavaScript</span>
+                            <span>Acessibilidade</span>
+                            <span>WCAG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Fullstack Developer - Trainee</h3>
+                            <span class="company">Equipe Digital</span>
+                        </div>
+                        <div class="timeline-meta">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Florianópolis, Brasil</span>
+                            <span class="period"><i class="fas fa-calendar"></i> Jun 2018 - Jan 2019</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Desenvolvimento de sistemas web com PHP, JavaScript, HTML, CSS e PostgreSQL</li>
+                            <li>Implementação de templates fornecidos por designers, garantindo fidelidade ao design aprovado</li>
+                            <li>Primeira experiência profissional, consolidando fundamentos de desenvolvimento web</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>PHP</span>
+                            <span>JavaScript</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Design Thinking Platform</h3>
+                    </div>
+                    <p class="project-description">
+                        Plataforma digital para aplicar a metodologia Design Thinking de forma interativa e colaborativa. 
+                        Projeto de conclusão de curso (TCC) com features para criação e gestão de design sprints, personas de usuário e prototipagem.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Angular</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/guiesco/design-thinking-ed-platform" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Suicide Risk Detection</h3>
+                    </div>
+                    <p class="project-description">
+                        Sistema de Big Data / Data Warehouse para detecção de risco de suicídio. 
+                        Coleta de dados de perfis do Twitter, construção de data warehouse e treinamento de modelo de NLP 
+                        para identificar tendências de risco de suicídio em perfis de usuários.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>NLP</span>
+                        <span>Machine Learning</span>
+                        <span>Twitter API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/guiesco" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Ver Perfil
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Scalable RESTful API</h3>
+                    </div>
+                    <p class="project-description">
+                        Design de arquitetura de API com autenticação JWT, rate limiting e documentação Swagger. 
+                        Containerizada com Docker para facilitar deployment e escalabilidade.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Node.js</span>
+                        <span>NestJS</span>
+                        <span>MongoDB</span>
+                        <span>Docker</span>
+                        <span>Swagger</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/guiesco" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Ver Perfil
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">NestJS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">REST APIs</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">GraphQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-desktop"></i> Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Angular</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Vue.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Redis</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> Machine Learning</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Pandas/NumPy</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">NLP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Model Training</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CI/CD</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-vial"></i> Testing</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Jest</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Jasmine</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Cypress</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TDD</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p>Estou sempre aberto a novas oportunidades e projetos desafiadores. Se você tem uma ideia ou precisa de um desenvolvedor fullstack experiente, vamos conversar!</p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:guieslopes99@hotmail.com">guieslopes99@hotmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <a href="tel:+5511996821083">+55 11 99682-1083</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Florianópolis, SC, Brasil</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <a href="https://github.com/guiesco" target="_blank" rel="noopener" class="social-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/guilherme-escobar-21b873164/" target="_blank" rel="noopener" class="social-btn">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Guilherme Escobar Lopes. Todos os direitos reservados.</p>
+            <p class="footer-note">Desenvolvido com <i class="fas fa-heart"></i> e muito <i class="fas fa-coffee"></i></p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
