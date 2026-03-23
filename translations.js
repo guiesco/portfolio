@@ -492,11 +492,17 @@ function updateContent() {
     });
     
     // Hero Section
-    document.querySelector('.hero-subtitle').textContent = t('hero.greeting');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    heroSubtitle.textContent = t('hero.greeting');
     document.querySelector('.hero-description').textContent = t('hero.subtitle');
     document.querySelector('.hero-bio').textContent = t('hero.bio');
     document.querySelectorAll('.hero-cta .btn')[0].textContent = t('hero.ctaPrimary');
     document.querySelectorAll('.hero-cta .btn')[1].textContent = t('hero.ctaSecondary');
+    
+    // Trigger typing effect after translation is set
+    if (window.startTypingEffect) {
+        window.startTypingEffect();
+    }
     
     // About Section
     document.querySelector('#about .section-title').textContent = t('about.title');

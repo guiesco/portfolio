@@ -199,24 +199,26 @@ scrollToTopBtn.addEventListener('mouseleave', () => {
     scrollToTopBtn.style.boxShadow = '0 4px 15px rgba(37, 99, 235, 0.3)';
 });
 
-// Add typing effect to hero subtitle
-const heroSubtitle = document.querySelector('.hero-subtitle');
-if (heroSubtitle) {
-    const originalText = heroSubtitle.textContent;
-    heroSubtitle.textContent = '';
-    heroSubtitle.style.opacity = '1';
-    
-    let i = 0;
-    const typeWriter = () => {
-        if (i < originalText.length) {
-            heroSubtitle.textContent += originalText.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        }
-    };
-    
-    setTimeout(typeWriter, 500);
-}
+// Typing effect function (will be called after translations load)
+window.startTypingEffect = function() {
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    if (heroSubtitle) {
+        const originalText = heroSubtitle.textContent;
+        heroSubtitle.textContent = '';
+        heroSubtitle.style.opacity = '1';
+        
+        let i = 0;
+        const typeWriter = () => {
+            if (i < originalText.length) {
+                heroSubtitle.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        };
+        
+        setTimeout(typeWriter, 500);
+    }
+};
 
 // Add particle effect to hero section (lightweight)
 const createParticle = () => {
