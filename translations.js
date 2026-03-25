@@ -464,8 +464,35 @@ const translations = {
     }
 };
 
-// Get current language from localStorage or default to Portuguese
-let currentLanguage = localStorage.getItem('language') || 'pt';
+const SUPPORTED_LANGS = ['pt', 'en', 'es'];
+
+/** Idioma na URL: ?lang=en (recomendado no GitHub Pages) ou último segmento do path (/en, /pt/es). */
+function parseLangFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const fromQuery = (params.get('lang') || params.get('locale') || '').toLowerCase();
+    if (SUPPORTED_LANGS.includes(fromQuery)) {
+        return fromQuery;
+    }
+    const segments = window.location.pathname.split('/').filter(Boolean);
+    const last = (segments[segments.length - 1] || '').toLowerCase();
+    if (SUPPORTED_LANGS.includes(last)) {
+        return last;
+    }
+    return null;
+}
+
+function syncLangToUrl(lang) {
+    if (!SUPPORTED_LANGS.includes(lang)) return;
+    try {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url);
+    } catch (_) {
+        /* file:// ou URL inválida */
+    }
+}
+
+let currentLanguage = 'pt';
 
 // Function to get translation
 function t(key) {
@@ -589,18 +616,24 @@ function changeLanguage(lang) {
     if (translations[lang]) {
         currentLanguage = lang;
         localStorage.setItem('language', lang);
+        syncLangToUrl(lang);
         updateContent();
     }
 }
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Set current language display
+    const fromUrl = parseLangFromUrl();
+    currentLanguage = fromUrl || localStorage.getItem('language') || 'pt';
+    if (!translations[currentLanguage]) {
+        currentLanguage = 'pt';
+    }
+    localStorage.setItem('language', currentLanguage);
+
     const currentLangSpan = document.getElementById('currentLang');
     if (currentLangSpan) {
         currentLangSpan.textContent = currentLanguage.toUpperCase();
     }
-    
-    // Update content with saved language
+
     updateContent();
 });
